@@ -1,0 +1,19 @@
+# Example 1
+#marker = "AFK"
+#replacement = "away from keyboard"
+#line = "I will now go to sleep and be AFK until lunch time tomorrow."
+
+# Example 2 # uncomment this to test with different input
+#marker = "EY"
+#replacement = "Eyjafjallajokull"
+#line = "The eruption of the volcano EY in 2010 disrupted air travel in Europe for 6 days."
+
+po_marker = line.find(marker)
+len_marker = len(marker)
+replaced = line[:po_marker]+replacement+line[po_marker+len_marker:]
+
+print replaced
+# Example 1 output should be:
+#>>> I will now go to sleep and be away from keyboard until lunch time tomorrow.
+# Example 2 output should be:
+#>>> The eruption of the volcano Eyjafjallajokull in 2010 disrupted air travel in Europe for 6 days.
